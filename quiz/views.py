@@ -19,7 +19,10 @@ quizzes = [
 ]
 
 def startpage(request):
-	return render(request, "startpage.html")
+	context = {
+		"quizzes": quizzes
+	}
+	return render(request, "startpage.html", context)
 
 def quiz(request, quiz_number):
 	return render(request, "quiz.html")
