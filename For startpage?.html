@@ -1,0 +1,17 @@
+	<h2>Frågesporter</h2>
+
+		{% for quiz in quizzes %}
+			<p><a href="">{{ quiz.name }}</a></p>
+		{% endfor %}
+
+		<ul>
+			{% for quiz in quizzes %}
+			<li><a href="">{{ quiz.name }} </a></li>
+			{% endfor %}
+		</ul>
+
+		<ul>
+			<li><a href="quiz.html">Quiz 1</a></li>
+			<li><a href="quiz.html">Quiz 2</a></li>
+			<li><a href="quiz.html">Quiz 3</a></li>
+		</ul>
