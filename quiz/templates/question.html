@@ -13,16 +13,13 @@
 		<h1>{{ question_number }}. {{ question }}</h1>
 		
 
-		<form action="/action_page.php">
-  			<input type="radio" name="alternative" value="svarsalternativ" checked>{{ answer1 }}<br>
-  			<input type="radio" name="alternative" value="svarsalternativ2" >{{ answer2 }}<br>
-  			<input type="radio" name="alternative" value="svarsalternativ3" > {{ answer3 }}<br>
-  			<input type="submit" value="Submit">
+		<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+			{% csrf_token %}
+  			<input type="radio" name="answer" value="1" checked>{{ answer1 }}<br>
+  			<input type="radio" name="answer" value="2" >{{ answer2 }}<br>
+  			<input type="radio" name="answer" value="3" > {{ answer3 }}<br>
+  			<button type="submit">Nästa</button>
 		</form>
-
-		<p><a href="{% url 'completed_page' quiz_number %}">
-    		Nästa
-		</a></p>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>
