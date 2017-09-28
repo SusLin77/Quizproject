@@ -21,7 +21,7 @@ def question(request, quiz_number, question_number):
 	context = {
 		"question_number": question_number,
 		"question": question.question,
-		"answer1": quetion.answer1,
+		"answer1": question.answer1,
 		"answer2": question.answer2,
 		"answer3": question.answer3,
 		"quiz": quiz,
