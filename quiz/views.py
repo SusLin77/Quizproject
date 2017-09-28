@@ -35,7 +35,7 @@ def answer(request, quiz_number, question_number):
 	saved_answers = request.session.get(str(quiz_number), {})
 	saved_answers[question_number] = int(answer)
 	request.session[quiz_number] = saved_answers
-	
+
 	quiz = Quiz.objects.get(quiz_number=quiz_number)
 	num_questions = quiz.questions.count()
 	if num_questions <= question_number:
@@ -45,9 +45,18 @@ def answer(request, quiz_number, question_number):
 
 
 def completed(request, quiz_number):
+	quiz = Quiz.objects.get(quiz_number=quiz_number)
+	questions = list(quiz.questions.all())
+	saved_answers = request.session.get(str(quiz_number), {})
+	num_correct_answers = 0
+	for question_number, answer in saved_answers.items():
+		correct_answer = questions[int(question_number) - 1].correct
+	if correct_answer == answer:
+		num_correct_answers = num_correct_answers + 1
+
+	num_questions = quiz.questions.count()
 	context = {
-	    "correct": 12,
-	    "total": 20,
-		"quiz_number": quiz_number,
-	}
+		"correct": num_correct_answers,
+		"total": num_questions,
+}
 	return render(request, "completed.html", context)
