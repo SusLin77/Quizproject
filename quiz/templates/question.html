@@ -11,14 +11,17 @@
 	<body>	
 		<div class="background1"> 
 		<h3>{{ question_number }}. {{ question }}</h3>
+
 		
-		<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
+		
+		<div>
+			<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 			{% csrf_token %}
-  			<input type="radio" name="answer" value="1" checked>{{ answer1 }}<br>
-  			<input type="radio" name="answer" value="2" >{{ answer2 }}<br>
-  			<input type="radio" name="answer" value="3" > {{ answer3 }}<br>
+  				<input type="radio" name="answer" value="1" checked>{{ answer1 }}<br>
+  				<input type="radio" name="answer" value="2" >{{ answer2 }}<br>
+  				<input type="radio" name="answer" value="3" >{{ answer3 }}<br>
   			<button type="submit">Nästa</button>
-		</form>
+			</form>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>
