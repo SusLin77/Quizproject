@@ -10,9 +10,8 @@
 	</head>
 	<body>	
 		
-		<h1>{{ question_number }}. {{ question }}</h1>
+		<h3>{{ question_number }}. {{ question }}</h3>
 		
-
 		<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 			{% csrf_token %}
   			<input type="radio" name="answer" value="1" checked>{{ answer1 }}<br>

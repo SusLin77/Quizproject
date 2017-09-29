@@ -9,10 +9,9 @@
 		<link rel="stylesheet" href="/static/quiz.css">
 	</head>
 	<body>
-		<h1>Allemansrätten</h1>
-		<h2>Allmänt</h2>
-		<h2>I skyddade områden</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Allemansrätten</h2>
+		<div class="line"></div>
+		<p>Allemansrätten är en unik möjlighet för alla att röra sig fritt i naturen. <br>Men vet du vad som gäller?</p>
 
 		{% for quiz in quizzes %}
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}">

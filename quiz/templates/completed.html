@@ -9,11 +9,11 @@
 		<link rel="stylesheet" href="/static/quiz.css">
 	</head>
 	<body>
-		<h1>Du är klar och fick {{ correct }} av {{ total }}</h1>
+		<h2>Du fick {{ correct }} av {{ total }}</h2>
 		<p><a href="{% url 'start_page' %}">
     	Till startsidan
 		</a></p>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>
 	</body>

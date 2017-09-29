@@ -1,9 +1,52 @@
-body { 
-	background: #ffffff;
+body {
+    background-image: url("Natur2.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #ffffff;
+    padding: 30px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
+
 h1 {
-	color: #9099A2;
 }
+
 h2 {
 	color: #9099A2;
+	font-family: verdana;
+	font-size: 40pt;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 30px;
 }
+h3 {
+	color: #9099A2;
+	font-family: verdana;
+	font-size: 17pt;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+.line{
+    width: 100%;
+    height: 0px;
+    border-bottom: 1px solid black;
+    position: center;
+    }
+
+p {
+	font-family: verdana;
+	font-size: 14pt;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+	margin-left: 80px;
+	padding-left: : 30px;
+
+	margin-left: 40px;
+	margin-right: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
