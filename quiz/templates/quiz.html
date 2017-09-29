@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<h2>{{ quiz.name }}</h2>
+		<div class="line"></div>
 		<p>{{ quiz.description }}</p>
 
 		<p><a href="{% url 'question_page' quiz_number 1 %}">

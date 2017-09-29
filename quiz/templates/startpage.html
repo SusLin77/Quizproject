@@ -9,16 +9,17 @@
 		<link rel="stylesheet" href="/static/quiz.css">
 	</head>
 	<body>
+		<div class="background1"> 
 		<h2>Allemansrätten</h2>
+		
 		<div class="line"></div>
 		<p>Allemansrätten är en unik möjlighet för alla att röra sig fritt i naturen. <br>Men vet du vad som gäller?</p>
 
 		{% for quiz in quizzes %}
 			<p><a href="{% url 'quiz_page' quiz.quiz_number %}">
-				{{ quiz.name }}
-			</a></p>
+				{{ quiz.name }}</a></p>
 		{% endfor %}
-
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>
 	</body>
