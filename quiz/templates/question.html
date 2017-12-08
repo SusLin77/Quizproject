@@ -12,8 +12,6 @@
 		<div class="background1"> 
 		<h3>{{ question_number }}. {{ question }}</h3>
 
-		
-		
 		<div>
 			<form action="{% url "answer_page" quiz.quiz_number question_number %}" method="post">
 			{% csrf_token %}
@@ -23,6 +21,7 @@
   			<button type="submit">Nästa</button>
 			</form>
 		</div>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>
 	</body>
